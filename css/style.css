@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Quattrocento:wght@400;700&display=swap');
 * {
     box-sizing: border-box;
 }
@@ -8,7 +9,6 @@
     font-weight: 400;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Mate+SC&family=Volkhov&display=swap');
  :root {
     --blue: #1D809F;
     --indigo: #6610f2;
@@ -41,6 +41,8 @@
     --light: #f8f9fa;
     --dark: #212529;
     /* --dark: #0c2245; */
+    --font1: 'Quattrocento', serif;
+    --font2: 'DM Serif Display', serif;
 }
 
 .bluebutton {
@@ -50,6 +52,7 @@
     align-self: auto;
     background-color: var(--primary);
     color: var(--gray-300);
+    margin: 10% 0;
 }
 
 .darkbutton {
@@ -59,6 +62,7 @@
     align-self: auto;
     background-color: var(--dark);
     color: var(--gray-300);
+    margin: 10% 0;
 }
 
 .bigbutton {
@@ -69,7 +73,6 @@
 
 html,
 body {
-    font-family: 'Mate SC', serif;
     display: flex;
     flex-flow: column nowrap;
     width: 100%;
@@ -83,21 +86,31 @@ body {
 ol,
 ul {
     list-style: none;
+    font-family: var(--font2);
+    font-weight: 700;
 }
 
 a {
     color: var(--dark);
     text-decoration: none;
+    font-family: var(--font1);
+    font-weight: 700;
 }
 
 p {
     text-align: justify;
     font-size: 1.2rem;
+    font-family: var(--font1);
 }
 
 h1 {
-    font-family: 'Volkhov', serif;
+    font-family: var(--font2);
     font-weight: 700;
+    margin: 10% 0;
+    font-size: 2.5rem;
+    letter-spacing: -1;
+    line-height: 1;
+    text-align: center;
 }
 
 header {
@@ -269,12 +282,6 @@ header .logo {
     display: none;
 }
 
-.main .wraper h1 {
-    font-size: 1.8rem;
-    text-align: center;
-    letter-spacing: -1;
-}
-
 .bigbutton a {
     font-size: 1.5rem;
 }
@@ -288,6 +295,10 @@ button a {
     color: var(--gray-100);
 }
 
+section {
+    margin: 3% 0;
+}
+
 section.free {
     display: flex;
     align-self: center;
@@ -295,14 +306,6 @@ section.free {
     justify-content: center;
     align-items: center;
     width: 85%;
-    margin-bottom: 10%;
-    margin-top: -5%;
-}
-
-section.free h1,
-section.services h1 {
-    font-size: 1.8rem;
-    letter-spacing: -1;
 }
 
 section.services {
@@ -311,12 +314,6 @@ section.services {
     justify-content: center;
     align-items: center;
     background-color: var(--primary)
-}
-
-section.services h1 {
-    color: var(--gray-100);
-    margin: 10% 0;
-    font-size: 2.4rem;
 }
 
 section.services .serviceswrap {
@@ -376,6 +373,46 @@ section.services .serviceswrap>div a h1 {
 
 section.services .serviceswrap>div:last-child a h1 {
     top: 119px;
+}
+
+section.testimonials {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+
+section.contact {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    background-color: var(--primary);
+    width: 100%;
+}
+
+#contactForm {
+    width: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+
+form .form-group {
+    margin: 5%;
+    width: 95%;
+}
+
+form .form-group input,
+form .form-group text-area {
+    height: 50px;
+    border-radius: 0px 0 7px 7px;
+    font-size: 1.1rem;
+    padding-left: 16px;
+    padding-right: 0px;
+}
+
+form .invalid-feedback,
+form .d-none {
+    display: none;
 }
 
 @media only screen and (min-device-width: 768px) and (max-device-width: 1027px) {}
@@ -451,12 +488,6 @@ section.services .serviceswrap>div:last-child a h1 {
         text-decoration: none;
         padding: 10%;
     }
-    /* .main {
-        background-image: url(../imgs/financial_advisor.jpg);
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-    } */
     .main .wraper {
         flex-flow: row nowrap;
         width: 100%;
@@ -469,6 +500,11 @@ section.services .serviceswrap>div:last-child a h1 {
         font-size: 2.5rem;
         letter-spacing: -1px;
         text-align: left;
+    }
+    h1 {
+        font-size: 2.8rem;
+        letter-spacing: -1px;
+        margin: 5% 0;
     }
     p {
         font-size: 1.6rem;
@@ -493,19 +529,17 @@ section.services .serviceswrap>div:last-child a h1 {
         text-align: center;
     }
     section.free {
-        margin-bottom: 5%;
+        margin-bottom: unset;
         margin-top: unset;
-    }
-    section.free h1 {
-        font-size: 2.5rem;
-        letter-spacing: -1px;
     }
     section.free p {
         width: 70%;
     }
-    section.services h1 {
-        font-size: 2.8rem;
+    .darkbutton {
         margin: 5% 0;
+    }
+    section.services h1 {
+        letter-spacing: 1;
     }
     section.services .serviceswrap {
         flex-flow: row nowrap;
@@ -517,14 +551,4 @@ section.services .serviceswrap>div:last-child a h1 {
         width: 240;
         margin-bottom: 10%;
     }
-    /* .serviceswrap .cont {
-        width: 240;
-        text-align: center;
-        position: relative;
-        left: 0;
-        bottom: 240px;
-    }
-    section.services .serviceswrap .cont h1 {
-        font-size: 2rem;
-    } */
 }

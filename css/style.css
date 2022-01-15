@@ -1,4 +1,4 @@
-    @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Quattrocento:wght@400;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Quattrocento:wght@400;700&display=swap');
     * {
         box-sizing: border-box;
     }
@@ -47,12 +47,13 @@
     
     .bluebutton {
         border: none;
-        border-radius: 3%;
+        border-radius: 7px;
         font-size: 1.2rem;
         align-self: auto;
         background-color: var(--primary);
         color: var(--gray-300);
         margin: 10% 0;
+        filter: drop-shadow(3px 3px 6px var(--gray-900));
     }
     
     .darkbutton {
@@ -63,6 +64,7 @@
         background-color: var(--dark);
         color: var(--gray-300);
         margin: 10% 0;
+        filter: drop-shadow(3px 3px 6px var(--gray-900));
     }
     
     .bigbutton {
@@ -343,6 +345,7 @@
         height: 320px;
         width: 240px;
         position: relative;
+        filter: drop-shadow(14px 14px 25px var(--gray-900));
     }
     
     section.services .serviceswrap>div a div.blur {
@@ -388,6 +391,13 @@
         background-color: var(--primary);
         width: 100%;
         padding-bottom: 7%;
+        margin-bottom: 0;
+    }
+    
+    section.contact>h1 {
+        color: var(--gray-100);
+        letter-spacing: 6;
+        text-transform: uppercase;
     }
     
     #contactForm {
@@ -411,9 +421,9 @@
         height: 50px;
         width: 100%;
         font-size: 1.1rem;
-        padding-left: 16px;
+        padding-left: 17px;
         padding-right: 0px;
-        background-color: var(--gray-300);
+        background-color: var(--gray-100);
         color: var(--gray-800);
         border-color: transparent;
         filter: drop-shadow(4px 4px 4px var(--gray-900));
@@ -425,6 +435,7 @@
     
     form .form-group select {
         border-radius: 0 0 7px 7px;
+        font-size: 1.2rem;
     }
     
     form .form-group input::placeholder {
@@ -437,13 +448,71 @@
         display: none;
     }
     
-    form button.bigbutton {
+    form button {
+        align-self: center;
         margin: 2%;
         font-size: 1.5rem;
+        letter-spacing: 3;
+        color: var(--dark);
+        font-weight: 700;
         width: 200px;
+        height: 55px;
+        background-color: var(--gray-100);
         border-radius: 7px;
         border-color: transparent;
         filter: drop-shadow(9px 9px 7px var(--gray-900));
+    }
+    
+    .contact .contactwrap {
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+    
+    .contact div.contactinfo {
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
+        /* background-color: var(--gray-100); */
+        width: 90%;
+        padding-bottom: 10%;
+        margin-top: 10%;
+        /* filter: drop-shadow(4px 4px 4px var(--gray-900)); */
+    }
+    
+    .contact div.contactinfo h1 {
+        color: var(--gray-100);
+    }
+    
+    .contact div.contactinfo address {
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        font-size: 1.3rem;
+        font-family: var(--font1);
+        text-decoration: none;
+        font-style: normal;
+    }
+    
+    .contact div.contactinfo address a {
+        color: var(--gray-100);
+    }
+    
+    .last {
+        margin-bottom: -5%;
+        padding-top: 3%;
+        width: 100%;
+        text-align: center;
+    }
+    
+    .last a {
+        color: var(--secondary);
+        font-size: 0.9rem;
     }
     
     @media only screen and (min-device-width: 768px) and (max-device-width: 1027px) {}
@@ -582,12 +651,32 @@
             width: 240;
             margin-bottom: 10%;
         }
+        .contact .contactwrap {
+            flex-flow: row nowrap;
+        }
+        #contactform {
+            width: 39%;
+        }
         form .form-group {
             margin: 0.5%;
-            width: 40%;
         }
         form .form-group input,
         form .form-group select {
             height: 70px;
+            padding-left: 5%;
         }
-    }
+        form .form-group select {
+            font-size: 1.3rem;
+            letter-spacing: 1;
+        }
+        .contact div.contactinfo {
+            width: 40%;
+            padding: unset;
+            margin: unset;
+            height: 100%;
+            justify-content: flex-start;
+        }
+        .last {
+            margin-bottom: -6%;
+            padding-top: 6%;
+        }

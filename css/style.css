@@ -53,7 +53,7 @@
     background-color: var(--primary);
     color: var(--gray-300);
     margin: 10% 0;
-    filter: drop-shadow(3px 3px 6px var(--gray-900));
+    filter: drop-shadow(4px 4px 4px var(--gray-900));
 }
 
 .darkbutton {
@@ -64,7 +64,7 @@
     background-color: var(--dark);
     color: var(--gray-300);
     margin: 10% 0;
-    filter: drop-shadow(3px 3px 6px var(--gray-900));
+    /* filter: drop-shadow(9px 9px 7px var(--gray-900)); */
 }
 
 .bigbutton {
@@ -107,9 +107,10 @@ p {
 
 h1 {
     font-family: var(--font2);
+    color: var(--primary);
     font-weight: 700;
     margin: 10% 0;
-    font-size: 2rem;
+    font-size: 2.5rem;
     letter-spacing: 1px;
     line-height: 1;
     text-align: center;
@@ -275,6 +276,10 @@ header .logo {
     flex-flow: column-reverse;
 }
 
+.main h1 {
+    color: var(--dark);
+}
+
 .main .wraper>div {
     display: flex;
     flex-flow: column;
@@ -297,9 +302,10 @@ button a {
     color: var(--gray-100);
 }
 
-section {
+
+/* section {
     margin: 3% 0;
-}
+} */
 
 section.free {
     display: flex;
@@ -308,6 +314,14 @@ section.free {
     justify-content: center;
     align-items: center;
     width: 85%;
+    padding-bottom: 6%;
+}
+
+section.free,
+section.services {
+    border-bottom: 1px solid var(--gray-900);
+    width: 85%;
+    align-self: center;
 }
 
 section.services {
@@ -315,8 +329,17 @@ section.services {
     flex-flow: column nowrap;
     justify-content: center;
     align-items: center;
-    background-color: var(--primary);
+    /* background-color: var(--primary); */
+    /* background-image: url(../imgs/bluewhitebricks.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; */
 }
+
+
+/* section.services h1 {
+    color: var(--gray-100);
+} */
 
 section.services .serviceswrap {
     display: flex;
@@ -336,7 +359,7 @@ section.services .serviceswrap>div {
 
 section.services .serviceswrap>div a {
     background-image: url(../imgs/janela.jpg);
-    background-size: cover;
+    background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
     display: flex;
@@ -345,28 +368,14 @@ section.services .serviceswrap>div a {
     height: 320px;
     width: 240px;
     position: relative;
-    filter: drop-shadow(14px 14px 25px var(--gray-900));
-}
-
-section.services .serviceswrap>div a div.blur {
-    position: absolute;
-    top: 107px;
-    left: 12px;
-    text-align: center;
-    width: 215px;
-    height: 102px;
-    background-image: url(../imgs/woodback.jpg);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    filter: blur(5px);
+    filter: drop-shadow(8px 6px 4px var(--gray-600));
 }
 
 section.services .serviceswrap>div a h1 {
-    font-size: 1.5rem;
-    color: var(--gray-100);
+    font-size: 1.7rem;
+    color: var(--white);
     position: absolute;
-    top: 105px;
+    top: 111px;
     width: 150px;
     text-align: center;
     text-decoration: underline;
@@ -375,7 +384,7 @@ section.services .serviceswrap>div a h1 {
 }
 
 section.services .serviceswrap>div:last-child a h1 {
-    top: 119px;
+    top: 124px;
 }
 
 section.testimonials {
@@ -383,9 +392,59 @@ section.testimonials {
     flex-flow: column nowrap;
     align-items: center;
     margin-top: -3%;
+    /* background-color: var(--secondary); */
 }
 
-section.contact {
+section.testimonials h1 {
+    width: 80%;
+}
+
+section.testimonials .testwrap {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+}
+
+section.testimonials .testwrap .card {
+    width: 80%;
+    margin: 6% 0;
+    padding: 5% 0;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../imgs/testimonials.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: drop-shadow(4px 4px 4px var(--gray-600));
+}
+
+section.testimonials .testwrap .card img {
+    display: none;
+}
+
+section.testimonials .testwrap .card p {
+    font-family: var(--font1);
+    color: var(--gray-100);
+    width: 80%;
+}
+
+section.testimonials .testwrap .card .client-name {
+    font-family: var(--font2);
+    color: var(--primary);
+    margin-bottom: 10%;
+    text-align: right;
+}
+
+section.testimonials .testwrap .card p.client-name span {
+    font-size: 1.8rem;
+    font-weight: 700;
+    opacity: 1;
+}
+
+footer.contact {
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
@@ -395,7 +454,7 @@ section.contact {
     margin-bottom: 0;
 }
 
-section.contact>h1 {
+footer.contact>h1 {
     color: var(--gray-100);
     letter-spacing: 6;
     text-transform: uppercase;
@@ -520,6 +579,10 @@ form .terms {
 .last a {
     color: var(--secondary);
     font-size: 0.9rem;
+}
+
+.contact .terms label a {
+    text-decoration: underline;
 }
 
 @media only screen and (min-device-width: 768px) and (max-device-width: 1027px) {}
@@ -650,13 +713,28 @@ form .terms {
     }
     section.services .serviceswrap {
         flex-flow: row nowrap;
-        width: 70%;
+        width: 85%;
         justify-content: space-around;
         margin-bottom: 5%;
     }
     section.services img {
         width: 240;
         margin-bottom: 10%;
+    }
+    section.testimonials .testwrap {
+        flex-flow: row wrap;
+    }
+    section.testimonials .testwrap .card {
+        max-width: 450px;
+        max-height: 70vh;
+        margin: 2%;
+    }
+    section.testimonials .testwrap .card .testimonial {
+        line-height: 1.5rem;
+        font-size: 1.3rem;
+    }
+    section.testimonials .testwrap .card .client-name {
+        font-size: 1.6rem;
     }
     .contact .contactwrap {
         flex-flow: row nowrap;

@@ -24,19 +24,19 @@
         <nav class="mainMenu">
             <ul>
                 <li>
-                    <a href="#">Home</a>
+                    <a href="index.html">Home</a>
                 </li>
                 <li>
-                    <a href="#">Services</a>
+                    <a href="services.html">Services</a>
                 </li>
                 <li>
-                    <a href="#">About</a>
+                    <a href="about.html">About</a>
                 </li>
                 <li>
-                    <a href="#">Licence</a>
+                    <a href="licence.html">Licence</a>
                 </li>
                 <li>
-                    <button class="bluebutton"><a href="#">Contact</a></button>
+                    <button class="bluebutton" id="navbutton" onclick='document.querySelector(".menuBtn").click()' ;><a href="index.html#contact">Contact</a></button>
                 </li>
             </ul>
         </nav>
@@ -48,7 +48,7 @@
                 <p>
                     Quer poupar mais dinheiro e otimizar as suas finanças pessoais mas não sabe por onde começar? Teremos todo o gosto em ajudar
                 </p>
-                <button class="bluebutton bigbutton"><a href="#">About Us</a></button>
+                <button class="bluebutton bigbutton"><a href="about.html">About Us</a></button>
             </div>
             <div class="picture">
                 <img src="./imgs/financial_advisor.jpg" alt="Picture of the Financial Advisor João Ferreira" />
@@ -66,27 +66,20 @@
     </section>
     <section class="services">
         <h1>Serviços</h1>
-
         <div class="serviceswrap">
 
             <div>
                 <a href="#">
-                    <div class="blur">
-                    </div>
                     <h1>Crédito Habitação</h1>
                 </a>
             </div>
             <div>
                 <a href="#">
-                    <div class="blur">
-                    </div>
                     <h1>Crédito Pessoal</h1>
                 </a>
             </div>
             <div>
                 <a href="#">
-                    <div class="blur">
-                    </div>
                     <h1>Seguro</h1>
                 </a>
             </div>
@@ -94,9 +87,25 @@
     </section>
     <section class="testimonials">
         <h1>Clients testimonials</h1>
-        <p>Under construction</p>
+        <div class="testwrap">
+            <div class="card">
+                <img src="bandmember.jpg" alt="Avatar">
+                <p class="client-name"><span>Chris Fox.</span><br>CEO at Mighty Schools.</p>
+                <p class="testimonial">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation."</p>
+            </div>
+            <div class="card">
+                <img src="bandmember.jpg" alt="Avatar">
+                <p class="client-name"><span>Chris Fox.</span><br>CEO at Mighty Schools.</p>
+                <p class="testimonial">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."</p>
+            </div>
+            <div class="card">
+                <img src="bandmember.jpg" alt="Avatar">
+                <p class="client-name"><span>Chris Fox.</span><br>CEO at Mighty Schools.</p>
+                <p class="testimonial">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."</p>
+            </div>
+        </div>
     </section>
-    <section class="contact">
+    <footer class="contact" id="contact">
         <h1>Contact</h1>
         <div class="contactwrap">
             <form id="contactForm">
@@ -142,7 +151,10 @@
                 </div>
                 <div class="terms">
                     <input type="checkbox" id="cond" name="terms-and-conditions" value="checked">
-                    <label for="terms-and-conditions">Declaro que aceito a <a href="#" target="_blank">Política de proteção de dados</a> e os <a href="#" target="_blank">Termos e Condições</a> e que os meus dados pessoais sejam processados para aconselhamento em formas de poupança, no âmbito da concessão de crédito.</label>
+                    <label for="terms-and-conditions">Declaro que aceito a <a href="politic.html"
+                            target="_blank">Política de proteção de dados</a> e os <a href="terms.html"
+                            target="_blank">Termos e Condições</a> e que os meus dados pessoais sejam processados para
+                        aconselhamento em formas de poupança, no âmbito da concessão de crédito.</label>
                 </div>
                 <!-- Submit Button-->
                 <button class="disabled" id="submitButton" type="submit">Send</button>
@@ -152,15 +164,15 @@
                 </h1>
                 <address>
                     <a href="mailto:joao.ferreira@maxfinance.pt">joao.ferreira@maxfinance.pt</a>
-                    <a href="tel+351938885048">(+351)938 885 048</a>
+                    <a href="tel:+351938885048">(+351)938 885 048</a>
                 </address>
             </div>
         </div>
         <div class="last">
             <a href="https://www.fofinhos.pt/" target="_blank">Made with love by fofihnos.pt</a>
         </div>
-    </section>
-    <script src="./js/main.js" type="text/javascript"></script>
+        </foter>
+        <script src="./js/main.js" type="text/javascript"></script>
 </body>
 
 </html>

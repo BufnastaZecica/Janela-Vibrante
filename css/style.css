@@ -268,21 +268,39 @@
         align-items: center;
         justify-content: center;
         padding-top: 5%;
+        background-image: url(../imgs/hands.jpg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
     }
     
     .main .wraper {
         width: 85%;
+        height: 86vh;
         display: flex;
-        flex-flow: column-reverse;
+        flex-flow: column;
     }
     
     .main h1 {
-        color: var(--dark);
+        color: var(--white);
+        text-shadow: 0px 0px 4px black;
+        margin-top: 0;
+        letter-spacing: 1;
     }
     
     .main .wraper>div {
         display: flex;
         flex-flow: column;
+        justify-content: space-between;
+        color: var(--white);
+        text-shadow: 0px 0px 4px black;
+        height: 100%;
+    }
+    
+    .main p {
+        font-weight: 800;
+        text-align: center;
+        font-size: 1.3rem;
     }
     
     .main .wraper>div.picture {
@@ -313,11 +331,11 @@
         align-items: center;
         width: 85%;
         padding-bottom: 6%;
+        border-bottom: 1px solid var(--gray-900);
     }
     
     section.free,
     section.services {
-        border-bottom: 1px solid var(--gray-900);
         width: 85%;
         align-self: center;
     }
@@ -342,6 +360,7 @@
         flex-flow: column nowrap;
         justify-content: center;
         align-items: center;
+        width: 100%;
     }
     
     section.services .serviceswrap>div {
@@ -354,7 +373,7 @@
     }
     
     section.services .serviceswrap>div a {
-        background-image: url(../imgs/janela.jpg);
+        background-image: url(../imgs/openwindow.png);
         background-size: contain;
         background-position: center;
         background-repeat: no-repeat;
@@ -362,16 +381,16 @@
         flex-flow: column nowrap;
         align-items: center;
         height: 320px;
-        width: 240px;
+        width: 315px;
         position: relative;
-        filter: drop-shadow(8px 6px 4px var(--gray-600));
+        /* filter: drop-shadow(8px 6px 4px var(--gray-600)); */
     }
     
     section.services .serviceswrap>div a h1 {
         font-size: 1.7rem;
-        color: var(--white);
+        color: var(--dark);
         position: absolute;
-        top: 111px;
+        top: 100px;
         width: 150px;
         text-align: center;
         text-decoration: underline;
@@ -380,7 +399,7 @@
     }
     
     section.services .serviceswrap>div:last-child a h1 {
-        top: 124px;
+        top: 99px;
     }
     
     section.testimonials {
@@ -388,8 +407,10 @@
         flex-flow: column nowrap;
         align-items: center;
         padding-bottom: 5%;
-        /* margin-top: -3%; */
-        /* background-color: var(--secondary); */
+        background-image: url(../imgs/yellowbackground.jpg);
+        background-size: cover;
+        background-position: 0 0;
+        background-repeat: no-repeat;
     }
     
     section.testimonials h1 {
@@ -401,7 +422,7 @@
         flex-flow: column nowrap;
         align-items: center;
         justify-content: center;
-        width: 100%;
+        width: 90%;
     }
     
     section.testimonials .testwrap .card {
@@ -415,9 +436,9 @@
         align-items: center;
         background-image: url(../imgs/testimonials.jpg);
         background-size: cover;
-        background-position: center;
+        background-position: 0 0;
         background-repeat: no-repeat;
-        filter: drop-shadow(4px 4px 4px var(--gray-600));
+        text-shadow: 0 0 3px var(--dark);
     }
     
     section.testimonials .testwrap .card img {
@@ -426,13 +447,13 @@
     
     section.testimonials .testwrap .card p {
         font-family: var(--font1);
-        color: var(--gray-100);
+        color: var(--white);
         width: 80%;
     }
     
     section.testimonials .testwrap .card .client-name {
         font-family: var(--font2);
-        color: var(--primary);
+        color: var(--white);
         margin-bottom: 10%;
         text-align: right;
     }
@@ -509,7 +530,7 @@
     
     form button {
         align-self: center;
-        margin: 2%;
+        margin: 6%;
         font-size: 1.5rem;
         letter-spacing: 3;
         color: var(--dark);
@@ -524,10 +545,19 @@
     
     .contact .contactwrap {
         display: flex;
-        flex-flow: column nowrap;
+        flex-flow: column-reverse;
         justify-content: center;
         align-items: center;
         width: 100%;
+        margin-bottom: 5%;
+    }
+    
+    .contact .contactinfowrap {
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        align-items: center;
+        margin: 8% 0;
     }
     
     .contact div.contactinfo {
@@ -590,23 +620,24 @@
         align-items: center;
         justify-content: center;
         width: 100%;
+        border-top: 2px solid var(--secondary);
+    }
+    
+    .licence,
+    .licence h1,
+    .licence h2,
+    .licence h3 .licence ul li p,
+    .licence p {
         font-size: 1rem;
-    }
-    
-    .licence h1 {
-        font-size: 2rem;
-    }
-    
-    .licence .generalinfo p {
-        margin: 3% 0;
+        line-height: 1.2rem;
     }
     
     .licence .personalinfo {
         padding: 2% 0;
     }
     
-    .licence p {
-        margin: 2% 0;
+    .licence .rc:last-child {
+        padding-bottom: 2%;
     }
     
     .licence>div {
@@ -628,14 +659,8 @@
         margin: 3% 0;
     }
     
-    .licence ul li {
-        font-size: 1.3rem;
-    }
-    
     .licence h2,
     .licence h3 {
-        font-size: 1.4rem;
-        line-height: 1.4rem;
         margin: 4% 0;
     }
     
@@ -713,12 +738,11 @@
             padding: 10%;
         }
         .main .wraper {
-            flex-flow: row nowrap;
-            width: 100%;
+            width: 50%;
         }
         .main .wraper>div {
             flex: 1;
-            margin-left: 11%;
+            justify-content: space-between;
         }
         .main .wraper>div>h1 {
             font-size: 2.5rem;
@@ -736,7 +760,10 @@
         .main .wraper>div button {
             width: 180px;
             height: 75px;
-            align-self: flex-end;
+        }
+        .main p {
+            font-size: 1.4rem;
+            margin-bottom: 2%;
         }
         .main .wraper>div.picture {
             display: flex;
@@ -791,10 +818,21 @@
             font-size: 1.6rem;
         }
         .contact .contactwrap {
-            flex-flow: row nowrap;
+            margin-bottom: unset;
+        }
+        footer.contact>h1 {
+            margin-bottom: 2%;
+        }
+        .contact .contactinfowrap {
+            display: flex;
+            flex-flow: row;
+            justify-content: space-evenly;
+            align-items: center;
+            margin: 8% 0;
+            width: 62%;
         }
         #contactform {
-            width: 39%;
+            width: 71%;
         }
         form .form-group {
             margin: 0.5%;
@@ -813,7 +851,6 @@
             padding: unset;
             margin: unset;
             height: 100%;
-            justify-content: flex-start;
         }
         .contact div.contactinfo address {
             max-width: 500px;
@@ -822,17 +859,21 @@
             margin-bottom: -6%;
             padding-top: 6%;
         }
+        .licence {
+            margin-top: 3%;
+            width: 80%;
+        }
+        .licence>div {
+            width: 80%;
+        }
         .licence h1 {
-            font-size: 2.8rem;
+            font-size: 1.2rem;
             max-width: 70%;
             align-self: center;
+            letter-spacing: unset;
         }
         .licence h2,
         .licence h3 {
             margin: 2% 0;
-        }
-        .licence p {
-            margin: 1% 0;
-            font-size: 1.3rem;
         }
     }

@@ -1,7 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Allerta+Stencil&family=Courier+Prime&display=swap');
-
-/* @import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Quattrocento:wght@400;700&display=swap"); */
-
 * {
     box-sizing: border-box;
 }
@@ -43,7 +40,6 @@
     --danger: #dc3545;
     --light: #f8f9fa;
     --dark: #212529;
-    /* --dark: #0c2245; */
     --font1: 'Allerta Stencil', sans-serif;
     --font2: 'Courier Prime', monospace;
 }
@@ -345,8 +341,18 @@ section.services {
     border-bottom: 1px solid var(--gray-900);
 }
 
-section.free p {
+section.free>div {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+section.free div p {
     width: 90%;
+    line-height: 1.5rem;
+    text-align: justify;
+    margin-bottom: 3%;
 }
 
 section.services {
@@ -673,6 +679,44 @@ form .terms {
 .licence h2,
 .licence h3 {
     margin: 4% 0;
+}
+
+.about,
+.about .aboutwrap>div {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.about .aboutwrap>div {
+    padding: 7%;
+}
+
+.about .aboutwrap>div:first-child {
+    background-color: var(--primary);
+}
+
+.about .aboutwrap {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.aboutwrap h2 {
+    font-size: 2rem;
+    padding: 3rem;
+}
+
+.aboutwrap p {
+    font-size: 1.4rem;
+    line-height: 2rem;
+}
+
+.aboutwrap .joao {
+    display: flex;
+    flex-flow: column nowrap;
 }
 
 @media only screen and (min-device-width: 768px) and (max-device-width: 1027px) {}

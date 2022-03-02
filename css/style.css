@@ -70,12 +70,12 @@
     /* filter: drop-shadow(9px 9px 7px var(--gray-900)); */
 }
 
-
-/* .bigbutton {
-        width: 170px;
-        height: 70px;
-        align-self: center;
-    } */
+.flexcentered {
+    display: flex;
+    flex-flow: column nowrap;
+    align-self: center;
+    justify-content: center;
+}
 
 html,
 body {
@@ -87,6 +87,7 @@ body {
     color: var(--dark);
     background-color: var(--gray-100);
     overflow-x: hidden;
+    position: absolute;
 }
 
 ol,
@@ -121,8 +122,6 @@ h1 {
 }
 
 header {
-    background-color: var(--secondary);
-    border-bottom: 0.1px solid var(--dark);
     display: flex;
     flex-flow: row nowrap;
 }
@@ -130,6 +129,7 @@ header {
 header .logo {
     display: flex;
     margin-left: 2%;
+    padding: 0.5rem 0;
 }
 
 .logopic img {
@@ -143,6 +143,9 @@ header .logo {
     line-height: 3.5rem;
     margin-left: 0%;
 }
+
+
+/* MENU */
 
 .menuBtn {
     height: 30px;
@@ -205,7 +208,7 @@ header .logo {
 }
 
 .mainMenu {
-    background-color: var(--secondary);
+    background-color: var(--gray-100);
     position: absolute;
     left: 0;
     top: 0;
@@ -215,7 +218,7 @@ header .logo {
     display: table;
     text-align: center;
     opacity: 0;
-    transition: all 1s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    /* transition: all 1s cubic-bezier(0.68, -0.55, 0.265, 1.55); */
     transform: scale(0);
 }
 
@@ -263,226 +266,50 @@ header .logo {
     color: var(--gray-300);
 }
 
-.main {
-    background-color: var(--secondary);
-    display: flex;
-    flex-flow: column;
-    width: 100%;
-    align-items: center;
-    justify-content: center;
-    padding-top: 5%;
-    background-image: url(../imgs/hihgfive.jpg);
+
+/* MENU END */
+
+section.main {
+    background-image: url(../imgs/family.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
 
-.main .wraper {
-    width: 85%;
-    height: 86vh;
-    display: flex;
-    flex-flow: column;
-}
-
-.main h1 {
+section.main h1,
+section.main p {
     color: var(--dark);
-    text-shadow: 0px 0px 3px white;
-    margin-top: 0;
-    letter-spacing: 1;
+    text-shadow: 0px 0px 4px var(--white);
 }
 
-.main .wraper>div {
-    display: flex;
-    flex-flow: column;
-    justify-content: space-between;
-    color: var(--dark);
-    text-shadow: 0px 0px 4px white;
-    height: 100%;
-}
-
-.main p {
-    font-weight: 800;
-    text-align: center;
+section.main p {
+    padding: 0 1rem;
+    line-height: 1.6rem;
+    letter-spacing: -1;
+    font-weight: 700;
     font-size: 1.3rem;
 }
 
-.main .wraper>div.picture {
-    display: none;
+section.services div {
+    border: 3px solid var(--primary);
+    border-radius: 10px;
+    margin-top: 0.8rem;
 }
 
-.bigbutton a {
-    font-size: 1.5rem;
+section.services div a {
+    flex-flow: row nowrap;
 }
 
-button a {
-    color: var(--gray-300);
-}
-
-.main .wraper button a {
-    font-size: 1.5rem;
-    color: var(--gray-100);
+section.services div a h1 {
+    font-size: 1.3rem;
+    margin: 0.7rem;
 }
 
 section.free {
-    display: flex;
-    align-self: center;
-    flex-flow: column nowrap;
-    justify-content: center;
-    align-items: center;
-    width: 85%;
-    padding-bottom: 6%;
-    /* border-bottom: 1px solid var(--gray-900); */
+    margin-top: 10rem;
 }
 
-section.free,
-section.services {
-    width: 100%;
-    align-self: center;
-    border-bottom: 1px solid var(--gray-900);
-}
-
-section.free>div {
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
-    align-items: center;
-}
-
-section.free div p {
-    width: 90%;
-    line-height: 1.5rem;
-    text-align: justify;
-    margin-bottom: 3%;
-}
-
-section.services {
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
-    align-items: center;
-}
-
-section.services .serviceswrap {
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-}
-
-.sw1,
-.sw2 {
-    display: flex;
-    flex-flow: column nowrap;
-    width: 100%;
-}
-
-.sw1>div,
-.sw2>div {
-    height: 200px;
-    margin: 0% 5% 5% 5%;
-    display: flex;
-    justify-content: center;
-    align-items: self-end;
-}
-
-.sw1>div:first-child {
-    background-image: url(../imgs/house.jpg);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
-.sw1>div:last-child {
-    background-image: url(../imgs/house.jpg);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
-.sw2>div {
-    background-image: url(../imgs/wallet.jpg);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
-.sw1>div a,
-.sw2>div a {
-    display: flex;
-    border-radius: 10px;
-    border: 2px solid;
-    margin-bottom: 1rem;
-}
-
-section.services .serviceswrap .sw1 h1,
-section.services .serviceswrap .sw2 h1 {
-    color: var(--dark);
-    font-size: 2rem;
-    margin: 0.6rem;
-    text-shadow: 0px 0px 4px white;
-}
-
-section.testimonials {
-    display: flex;
-    flex-flow: column nowrap;
-    align-items: center;
-    padding-bottom: 5%;
-    background-image: url(../imgs/pencils.jpg);
-    background-size: cover;
-    background-position: 0 0;
-    background-repeat: no-repeat;
-}
-
-section.testimonials h1 {
-    width: 80%;
-}
-
-section.testimonials .testwrap {
-    display: flex;
-    flex-flow: column nowrap;
-    align-items: center;
-    justify-content: center;
-    width: 90%;
-}
-
-section.testimonials .testwrap .card {
-    width: 80%;
-    margin: 6% 0;
-    padding: 5% 0;
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
-    align-items: center;
-    text-shadow: 0 0 3px var(--white);
-}
-
-section.testimonials .testwrap .card img {
-    display: none;
-}
-
-section.testimonials .testwrap .card p {
-    font-family: var(--font2);
-    color: var(--dark);
-    line-height: 1.5rem;
-    letter-spacing: -1;
-}
-
-section.testimonials .testwrap .card .client-name {
-    font-family: var(--font1);
-    color: var(--dark);
-    margin-bottom: 10%;
-    text-align: right;
-    width: 100%;
-}
-
-section.testimonials .testwrap .card p.client-name span {
-    font-size: 1.8rem;
-    font-weight: 700;
-    opacity: 1;
-}
-
-footer.contact {
+.contact {
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
@@ -681,249 +508,43 @@ form .terms {
     margin: 4% 0;
 }
 
-.about,
-.about .aboutwrap>div {
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
-    align-items: center;
-}
-
-.about .aboutwrap>div {
-    padding: 7%;
-}
-
-.about .aboutwrap>div:first-child {
-    background-color: var(--primary);
-}
-
-.about .aboutwrap {
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
-    align-items: center;
-}
-
-.aboutwrap h2 {
-    font-size: 2rem;
-    padding: 3rem;
-}
-
-.aboutwrap p {
-    font-size: 1.4rem;
-    line-height: 2rem;
-}
-
-.aboutwrap .joao {
-    display: flex;
-    flex-flow: column nowrap;
-}
-
 @media only screen and (min-device-width: 768px) and (max-device-width: 1027px) {}
 
 @media only screen and (min-width: 1027px) {
-    .menuBtn {
-        display: none;
+    nav.mainMenu.act {
+        background-color: var(--gray-100);
+        width: 37%;
+        right: 0;
+        left: unset;
     }
-    header .logo {
-        flex: 1;
-        margin-left: 4%;
-    }
-    header .logo img {
-        height: 63px;
-    }
-    header .logo .logotext {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-size: 3rem;
-        margin-left: 4%;
-    }
-    .mainMenu {
-        display: flex;
-        flex: 1;
-        align-items: center;
-        opacity: 1;
-        position: unset;
-        transform: none;
-        height: unset;
-        width: unset;
-    }
-    .mainMenu ul {
-        display: flex;
-        align-items: center;
-        list-style: none;
+    section.main {
+        width: 100%;
+        background-position: 0 -1rem;
+        min-height: 70vh;
         justify-content: flex-end;
-        flex: 1;
-        font-size: 1.5rem;
     }
-    .mainMenu ul {
-        display: flex;
-        margin: 0;
+    section.main h1 {
+        margin: 0 0 10rem;
+        font-size: 3rem;
     }
-    .mainMenu li {
-        transition: none;
-        opacity: 1;
-        padding: 0;
-    }
-    .mainMenu li:nth-child(odd) {
-        transform: none;
-    }
-    .mainMenu li:nth-child(even) {
-        transform: none;
-    }
-    .mainMenu li:last-child {
-        transform: none;
-    }
-    .mainMenu ul li {
-        margin-right: 5%;
-        display: flex;
-        opacity: 1;
-        transform: none;
-    }
-    .mainMenu ul li button {
-        height: 56px;
-        width: 140px;
-        display: flex;
-        align-items: center;
-    }
-    .mainMenu ul li button a {
-        color: var(--gray-300);
-        text-decoration: none;
-    }
-    .main .wraper {
-        width: 50%;
-    }
-    .main .wraper>div {
-        flex: 1;
-        justify-content: space-between;
-    }
-    .main .wraper>div>h1 {
-        font-size: 2.5rem;
-        letter-spacing: -1px;
-        text-align: left;
-    }
-    h1 {
-        font-size: 2.8rem;
-        letter-spacing: -1px;
-        margin: 4% 0 6% 0;
-    }
-    p {
-        font-size: 1.6rem;
-    }
-    .main p {
-        font-size: 1.4rem;
-        margin-bottom: 2%;
-    }
-    .main .wraper>div.picture {
-        display: flex;
-        flex: 1;
-        margin-right: 10%;
-    }
-    .main .wraper>div.picture img {
-        max-width: 700px;
-        align-self: center;
-        width: 565px;
-    }
-    .main .wraper>div.picture h1 {
-        font-size: 1.8rem;
+    section.main p {
+        line-height: 2rem;
+        font-size: 1.5em;
         text-align: center;
     }
-    section.free {
-        margin-bottom: unset;
-        margin-top: unset;
+    section.main .bluebutton {
+        margin: 3rem 0 4rem;
     }
-    section.free p {
-        width: 70%;
-    }
-    .darkbutton {
-        margin: 5% 0;
-    }
-    section.services h1 {
-        letter-spacing: 1;
-    }
-    section.services .serviceswrap {
+    section.services {
         flex-flow: row nowrap;
-        width: 85%;
-        justify-content: space-around;
-        margin-bottom: 7%;
     }
-    section.services img {
-        width: 240;
-        margin-bottom: 10%;
+    section.services div {
+        margin: 0.8rem 1rem;
     }
-    section.testimonials .testwrap {
-        flex-flow: row wrap;
+    section.services div a h1 {
+        font-size: 1.5rem;
     }
-    section.testimonials .testwrap .card {
-        max-width: 450px;
-        max-height: 70vh;
-        margin: 2%;
-    }
-    section.testimonials .testwrap .card .testimonial {
-        line-height: 1.5rem;
-        font-size: 1.3rem;
-    }
-    section.testimonials .testwrap .card .client-name {
-        font-size: 1.6rem;
-    }
-    .contact .contactwrap {
-        margin-bottom: unset;
-    }
-    footer.contact>h1 {
-        margin-bottom: 2%;
-    }
-    .contact .contactinfowrap {
-        display: flex;
-        flex-flow: row;
-        justify-content: space-evenly;
-        align-items: center;
-        margin: 8% 0;
-        width: 62%;
-    }
-    #contactform {
-        width: 71%;
-    }
-    form .form-group {
-        margin: 0.5%;
-    }
-    form .form-group input,
-    form .form-group select {
-        height: 70px;
-        padding-left: 5%;
-    }
-    form .form-group select {
-        font-size: 1.3rem;
-        letter-spacing: 1;
-    }
-    .contact div.contactinfo {
-        width: 40%;
-        padding: unset;
-        margin: unset;
-        height: 100%;
-    }
-    .contact div.contactinfo address {
-        max-width: 500px;
-    }
-    .last {
-        margin-bottom: -6%;
-        padding-top: 6%;
-    }
-    .licence {
-        margin-top: 3%;
-        width: 80%;
-    }
-    .licence>div {
-        width: 80%;
-    }
-    .licence h1 {
-        font-size: 1.2rem;
-        max-width: 70%;
-        align-self: center;
-        letter-spacing: unset;
-    }
-    .licence h2,
-    .licence h3 {
-        margin: 2% 0;
+    section.services button {
+        margin: 3rem;
     }
 }

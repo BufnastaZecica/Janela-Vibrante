@@ -33,6 +33,7 @@
     --gray-800: #343a40;
     --gray-900: #212529;
     --primary: #1d809f;
+    --primary-t: #1d819f73;
     --secondary: #ecb807;
     --success: #198754;
     --info: #0dcaf0;
@@ -73,8 +74,9 @@
 .flexcentered {
     display: flex;
     flex-flow: column nowrap;
-    align-self: center;
+    align-content: center;
     justify-content: center;
+    align-self: center;
 }
 
 html,
@@ -88,6 +90,7 @@ body {
     background-color: var(--gray-100);
     overflow-x: hidden;
     position: absolute;
+    font-family: var(--font1);
 }
 
 ol,
@@ -119,6 +122,10 @@ h1 {
     letter-spacing: 1px;
     line-height: 1;
     text-align: center;
+}
+
+h2 {
+    font-family: var(--font1);
 }
 
 header {
@@ -270,6 +277,7 @@ header .logo {
 /* MENU END */
 
 section.main {
+    width: 100%;
     background-image: url(../imgs/family.jpg);
     background-size: cover;
     background-position: center;
@@ -277,7 +285,8 @@ section.main {
 }
 
 section.main .wraper {
-    margin-top: 14rem;
+    margin-top: 19rem;
+    background-color: #2125295d;
 }
 
 section.main h1,
@@ -285,12 +294,17 @@ section.main p {
     color: var(--white);
 }
 
+section.main h1 {
+    font-size: 2rem;
+    margin: 1rem;
+}
+
 section.main p {
-    padding: 0 1rem;
-    line-height: 1.6rem;
-    letter-spacing: -1;
+    padding: 0.5rem 1rem;
+    line-height: 1rem;
+    letter-spacing: 1;
     font-weight: 700;
-    font-size: 1.3rem;
+    font-size: 1rem;
 }
 
 section.services div {
@@ -367,7 +381,8 @@ section.free {
     margin-bottom: 0;
 }
 
-section.free {
+
+/* section.free {
     margin-top: 10rem;
 }
 
@@ -409,7 +424,7 @@ section.free {
     to {
         left: -40rem;
     }
-}
+} */
 
 section.free {
     margin-top: 3rem;
@@ -430,8 +445,20 @@ section.description {
     margin-top: 5rem;
 }
 
+.finacial-advisor-pic {
+    background-image: url(../imgs/financial_advisor.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 35vh;
+}
+
 section.description div {
     padding: 1rem;
+}
+
+section.description div h2 {
+    margin-top: 2rem;
 }
 
 section.description div p,
@@ -467,7 +494,7 @@ section.testimonials .card p.client-name span {
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
-    background-color: var(--secondary);
+    background-color: var(--primary);
     width: 100%;
     padding-bottom: 7%;
     margin-bottom: 0;
@@ -477,6 +504,15 @@ footer.contact>h1 {
     color: var(--gray-100);
     letter-spacing: 0.8rem;
     text-transform: uppercase;
+}
+
+.quem-sou {
+    padding: 0 2rem 1rem 2rem;
+}
+
+.quem-sou h2 {
+    text-align: center;
+    margin-bottom: 1rem;
 }
 
 #contactForm {
@@ -598,18 +634,6 @@ form .terms {
     text-align: justify;
 }
 
-.last {
-    margin-bottom: -5%;
-    padding-top: 3%;
-    width: 100%;
-    text-align: center;
-}
-
-.last a {
-    color: var(--primary);
-    font-size: 0.9rem;
-}
-
 .contact .terms label a {
     text-decoration: underline;
 }
@@ -620,7 +644,7 @@ form .terms {
     align-items: center;
     justify-content: center;
     width: 100%;
-    border-top: 2px solid var(--primary);
+    border-top: 2px solid var(--secondary);
 }
 
 .licence,
@@ -664,6 +688,18 @@ form .terms {
     margin: 4% 0;
 }
 
+.last {
+    margin-bottom: -5%;
+    padding-top: 3%;
+    width: 100%;
+    text-align: center;
+}
+
+.last a {
+    color: var(--secondary);
+    font-size: 0.9rem;
+}
+
 @media only screen and (min-device-width: 768px) and (max-device-width: 1027px) {}
 
 @media only screen and (min-width: 1027px) {
@@ -674,14 +710,19 @@ form .terms {
         left: unset;
     }
     section.main {
-        width: 100%;
-        background-position: 0 -1rem;
-        min-height: 70vh;
-        justify-content: flex-end;
+        width: 144%;
+        background-position: -19rem -1rem;
         min-height: 76vh;
     }
+    section.main .wraper {
+        max-width: 24%;
+        margin-right: 17%;
+        align-self: flex-end;
+        margin-top: unset;
+        border-radius: 10%;
+    }
     section.main h1 {
-        margin: 0 0 10rem;
+        margin: 2rem;
         font-size: 3rem;
     }
     section.main p {
@@ -768,6 +809,12 @@ form .terms {
     }
     #contactform {
         width: 71%;
+    }
+    .quem-sou {
+        padding: 0 3rem 3rem 3rem;
+        width: 69%;
+        text-align: justify;
+        color: var(--light);
     }
     form .form-group {
         margin: 0.5%;

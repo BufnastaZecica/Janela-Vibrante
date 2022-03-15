@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en" translate="no">
 
 <head>
@@ -12,7 +13,7 @@
 </head>
 
 <body>
-    <header>
+    <header id="top">
         <div class="logo ">
             <a href="index.html" class="logopic">
                 <img src="./imgs/logo.png" alt="Logo">
@@ -37,8 +38,7 @@
                     <a href="#licence" onclick='document.querySelector(".menuBtn").click()' ;>Licence</a>
                 </li>
                 <li>
-                    <a href="index.html#contact" class='bluebutton'>Contact</a>
-                    <!-- <button class="bluebutton" id="navbutton" onclick='document.querySelector(".menuBtn").click()' ;><a href="index.html#contact">Contact</a></button> -->
+                    <a href="index.html#contact" onclick='document.querySelector(".menuBtn").click()' ; class='bluebutton'>Contact</a>
                 </li>
             </ul>
         </nav>
@@ -101,19 +101,22 @@
         </h1>
     </section>
     <section class="description flexcentered">
-        <div>
-            <p><b></b>A janela Vibrante</a> é uma empresa 100% Portuguesa, especialista e experiente na área financeira.</p>
+        <div class="flexcentered">
+            <p><b>A janela Vibrante</b> é uma empresa 100% Portuguesa, especialista e experiente na área financeira.</p>
             <p>Presta um serviço de qualidade e confiança na identificação e negociação das melhores condições de crédito para clientes particulares.</p>
             <p>Trabalhamos com elevado profissionalismo, disponibilidade e confiança, negociando a melhor solução para si, com as principais Instituições Bancárias, e Imobiliárias a operar em Portugal, o que faz da Janela Vibrante o seu parceiro financeiro
                 ideal. </p>
-            <h2>Visão</h2>
-            <p>Consolidar a posição de referência que temos no aconselhamento financeiro em Portugal.</p>
-            <p>Melhorar todos os dias, em parceria com os clientes, de forma a conseguir responder-lhes de forma cada vez mais rápida e eficaz. </p>
-            <h2>Missão</h2>
-            <p>Ajudar particulares a encontrar as melhores soluções a nível financeiro para a realização dos seus sonhos.</p>
-            <p>Avaliar e negociar de forma rigorosa as ofertas disponíveis no mercado de forma a responder de forma eficaz e credível às necessidades de cada cliente.</p>
-            <h2>Valores</h2>
-            <p>Somos uma equipa de profissionais Sérios e experientes com sentido de Responsabilidade, Respeito e Ética com o compromisso de apresentar o melhor serviço focado no cliente.</p>
+            <button class="darkbutton" type="button" id="hide" onclick="myFunction()">Ler Mais</button>
+            <div class="more-hidden" id="more-hidden">
+                <h2>Visão</h2>
+                <p>Consolidar a posição de referência que temos no aconselhamento financeiro em Portugal.</p>
+                <p>Melhorar todos os dias, em parceria com os clientes, de forma a conseguir responder-lhes de forma cada vez mais rápida e eficaz. </p>
+                <h2>Missão</h2>
+                <p>Ajudar particulares a encontrar as <b>melhores soluções a nível financeiro</b> para a realização dos seus sonhos.</p>
+                <p>Avaliar e negociar de forma rigorosa as <b>ofertas disponíveis no mercado de forma a responder de forma eficaz e credível às necessidades de cada cliente.</b></p>
+                <h2>Valores</h2>
+                <p>Somos uma equipa de profissionais <b>Sérios e experientes com sentido de Responsabilidade, Respeito e Ética com o compromisso</b> de apresentar o melhor serviço focado no cliente.</p>
+            </div>
         </div>
         <div class="finacial-advisor-pic">
         </div>
@@ -173,7 +176,7 @@
                 <div class="d-none" id="submitErrorMessage">
                     <div class="text-center text-danger mb-3">Error sending message!</div>
                 </div>
-                <div class="terms">
+                <div class="terms" id="licence">
                     <input type="checkbox" id="cond" name="terms-and-conditions" value="checked">
                     <label for="terms-and-conditions">Declaro que aceito a <a href="politic.html"
                             target="_blank">Política de proteção de dados</a> e os <a href="terms.html"
@@ -183,8 +186,10 @@
                 <!-- Submit Button-->
                 <button class="disabled" id="submitButton" type="submit">Send</button>
             </form>
-            <div class="quem-sou">
-                <h2>Quem Sou?</h2>
+            <div class="quem-sou flexcentered">
+                <button class="darkbutton" type="button" id="hiden" onclick="about()" >Quem Sou?</button>
+                <div class="more-hide" id="more-hide">
+                <!-- <h2>Quem Sou?</h2> -->
                 <p>Eu sou o João Paulo Ferreira, a minha formação de base é na área de Gestão e Marketing.
                     Trabalhei durante 30 anos na Banca, tendo-me especializado nas áreas de gestão de crédito e consultoria.
                     </p>
@@ -194,6 +199,7 @@
                     <p>A apresentação da melhor proposta para o cliente é 100% gratuito. Como?</p>
                     <p>A escolha será sempre do cliente, que irá optar livremente por uma das propostas apresentadas, sem impacto nas condições de crédito que advenha da nossa intermediação. A nossa remuneração provém das instituições financeiras.</p>
             </div>
+        </div>
             <div class="contactinfowrap">
                 <div class="foto">
                     <img src="./imgs/image001.png" alt="Photo of João Paulo Ferreira">
@@ -205,11 +211,8 @@
                     <a href="mailto:joao.ferreira@maxfinance.pt">joao.ferreira@maxfinance.pt</a>
                     <a href="tel:+351938885048">(+351)938 885 048</a>
                 </address>
-                
                 </div>
-            </div>
-          
-            
+            </div> 
         </div>
         <div class="licence" id="licence">
             <div>
@@ -280,6 +283,9 @@
                         <a href="https://www.livroreclamacoes.pt/Inicio/" target="_blank">www.livroreclamacoes.pt</a></li>
                 </ul>
             </div>
+        </div>
+        <div>
+            <a href="#top"><i class="fa-solid fa-chevron-up"></i></a>
         </div>
         <div class="last">
             <a href="https://www.fofinhos.pt/" target="_blank">Made with love by fofihnos.pt</a>

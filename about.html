@@ -1,4 +1,5 @@
-<html lang="en">
+<!DOCTYPE html>
+<html lang="en" translate="no">
 
 <head>
     <meta charset="UTF-8" />
@@ -7,11 +8,12 @@
     <title>Janela Vibrante</title>
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/style.css" />
+    <script src="https://kit.fontawesome.com/27f499f5c8.js" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 
 <body>
-    <header>
+    <header id="top">
         <div class="logo ">
             <a href="index.html" class="logopic">
                 <img src="./imgs/logo.png" alt="Logo">
@@ -36,46 +38,53 @@
                     <a href="#licence" onclick='document.querySelector(".menuBtn").click()' ;>Licence</a>
                 </li>
                 <li>
-                    <button class="bluebutton"><a href="#contact">Contact</a></button>
+                    <a href="#contact" onclick='document.querySelector(".menuBtn").click()' ; class='bluebutton'>Contact</a>
                 </li>
             </ul>
         </nav>
     </header>
     <main class="about">
-        <div class="aboutwrap">
+        <div class="aboutwrap flexcentered ">
             <div>
-                <p><b>Janela Vibrante</b> is a 100% Portuguese company, specialised for and experienced in the financial area.</p>
-                <p>It provides a quality and reliable service in the identification and negotiation of the best credit conditions for private customers.</p>
-                <p>We work with high professionalism, availability and trust, negotiating the best solution for you, with the main Banking and Real Estate Institutions operating in Portugal, which makes Janela Vibrante your ideal financial partner.</p>
             </div>
-            <div class="joao">
-                <h2>Who am I?</h2>
-                <img src="./imgs/image001.png" alt="Photo of João Paulo Ferreira">
+            <div class="empresa flexcentered">
                 <div>
-                    <p>I'm <b>João Paulo Ferreira</b>, my basic training is in the area of ​​Management and Marketing. </p>
-                    <p>I worked at Banking for 30 years, specializing in the areas of credit management and consulting.</p>
-                    <p>In 2021, I decided to move forward with Janela Vibrante, a credit intermediation project, with the aim of helping all families to negotiate their credit products.</p>
-                    <p>At Janela Vibrante I have the possibility to apply all my technical knowledge and make the most of my 30 years of professional experience in leading teams and in contact with the consumer, where I handled thousands of loans.</p>
-                    <p>Today I work not with one, but with the main banking/credit institutions, which allows me to negotiate and obtain the best housing or personal credit solution that meets the different needs of customers.</p>
-                    <p>The presentation of the best proposal to the client is 100% free. How?</p>
-                    <p>The choice will always be made by the customer, who will freely choose one of the proposals presented, with no impact on the credit conditions arising from our intermediation. Our remuneration comes from financial institutions.</p>
+                    <p><b>A janela Vibrante</b></a> é uma empresa 100% Portuguesa, especialista e experiente na área financeira.</p>
+                    <p>Presta um serviço de qualidade e confiança na identificação e negociação das melhores condições de crédito para clientes particulares.</p>
+                    <p>Trabalhamos com elevado profissionalismo, disponibilidade e confiança, negociando a melhor solução para si, com as principais Instituições Bancárias, e Imobiliárias a operar em Portugal, o que faz da Janela Vibrante o seu parceiro
+                        financeiro ideal. </p>
+                </div>
+                <div>
+                    <h2>Visão</h2>
+                    <p>Consolidar a posição de referência que temos no aconselhamento financeiro em Portugal.</p>
+                    <p>Melhorar todos os dias, em parceria com os clientes, de forma a conseguir responder-lhes de forma cada vez mais rápida e eficaz. </p>
+                </div>
+                <div>
+                    <h2>Missão</h2>
+                    <p>Ajudar particulares a encontrar as <b>melhores soluções a nível financeiro</b> para a realização dos seus sonhos.</p>
+                    <p>Avaliar e negociar de forma rigorosa as <b>ofertas disponíveis no mercado de forma a responder de forma eficaz e credível às necessidades de cada cliente.</b></p>
+                </div>
+                <div>
+                    <h2>Valores</h2>
+                    <p>Somos uma equipa de profissionais <b>Sérios e experientes com sentido de Responsabilidade, Respeito e Ética com o compromisso</b> de apresentar o melhor serviço focado no cliente.</p>
                 </div>
             </div>
-            <div>
-                <h2>Vision</h2>
-                <p>Consolidate our reference position in financial advice in Portugal.</p>
-                <p>Improve every day, in partnership with customers, in order to be able to respond to them more and more quickly and effectively.</p>
+            <div class="joao flexcentered">
+                <div class="joaowrap flexcentered">
+                    <div class="joaoimg">
+                    </div>
+                    <div class="flexcentered">
+                        <h2>Quem Sou?</h2>
+                        <p>Eu sou o <b>João Paulo Ferreira</b>, a minha formação de base é na área de Gestão e Marketing. Trabalhei durante 30 anos na Banca, tendo-me especializado nas áreas de gestão de crédito e consultoria.
+                        </p>
+                        <p>Em 2021, decidi avançar com a Janela Vibrante, um projeto de intermediação de crédito, com o objetivo de ajudar todas as famílias a negociar os seus produtos de crédito.</p>
+                        <p>Na Janela Vibrante tenho a possibilidade de aplicar todos os meus conhecimentos técnicos e rentabilizar os 30 anos de experiência profissional de liderar equipas e de contacto com o consumidor.</p>
+                        <p>Hoje trabalho não com uma, mas com as principais instituições bancárias/crédito, o que me possibilita negociar e conseguir a melhor solução de crédito de habitação ou pessoal que vá de encontro às diferentes necessidades dos clientes.</p>
+                        <p>A apresentação da melhor proposta para o cliente é 100% gratuito. Como?</p>
+                        <p>A escolha será sempre do cliente, que irá optar livremente por uma das propostas apresentadas, sem impacto nas condições de crédito que advenha da nossa intermediação. A nossa remuneração provém das instituições financeiras.</p>
+                    </div>
+                </div>
             </div>
-            <div>
-                <h2>Mission</h2>
-                <p>Helping individuals find the <b>best financial solutions</b> for the realization of their dreams.</p>
-                <p>Strictly evaluate and negotiate the offers available on the market in order to respond effectively and credibly to the needs of each customer.</p>
-            </div>
-            <div>
-                <h2>Values</h2>
-                <p><b>We are a team of serious and experienced professionals with a sense of Responsibility, Respect and Ethics, committed to providing the best customer-focused service.</b></p>
-            </div>
-        </div>
 
     </main>
     <footer class="contact" id="contact">
@@ -129,7 +138,7 @@
                 <!-- Submit Button-->
                 <button class="disabled" id="submitButton" type="submit">Send</button>
             </form>
-            <div class="contactinfo">
+            <div class="contactinfo aboutinfo">
                 <h1>João Paulo<br> Ferreira
                 </h1>
                 <address>
@@ -207,6 +216,9 @@
                         <a href="https://www.livroreclamacoes.pt/Inicio/" target="_blank">www.livroreclamacoes.pt</a></li>
                 </ul>
             </div>
+        </div>
+        <div>
+            <a href="#top"><i class="fa-solid fa-chevron-up"></i></a>
         </div>
         <div class="last">
             <a href="https://www.fofinhos.pt/" target="_blank">Made with love by fofihnos.pt</a>

@@ -272,6 +272,7 @@
         color: var(--dark);
         display: inline-block;
         font-size: 1.5rem;
+        white-space: nowrap;
     }
     
     .mainMenu>ul>li>button>a {
@@ -386,7 +387,6 @@
     
     section.free h1 {
         font-size: 1.3rem;
-        width: 80%;
         border-top: 3px solid var(--secondary);
         border-bottom: 3px solid var(--secondary);
         padding: 0.8rem;
@@ -631,6 +631,7 @@
     
     .contact .terms label a {
         text-decoration: underline;
+        color: var(--secondary);
     }
     
     .licence {
@@ -666,6 +667,10 @@
         border-bottom: 1px solid var(--dark);
     }
     
+    .licence>div.rc {
+        padding-bottom: 3%;
+    }
+    
     .licence>div:last-child {
         border-bottom: none;
     }
@@ -681,6 +686,10 @@
     .licence h2,
     .licence h3 {
         margin: 4% 0;
+    }
+    
+    .totop {
+        padding: 3%;
     }
     
     .last {
@@ -742,11 +751,80 @@
     @media only screen and (min-device-width: 768px) and (max-device-width: 1027px) {}
     
     @media only screen and (min-width: 1027px) {
-        nav.mainMenu.act {
+        /* nav.mainMenu.act {
             background-color: var(--gray-100);
             width: 37%;
             right: 0;
             left: unset;
+        } */
+        .menuBtn {
+            display: none;
+        }
+        header .logo {
+            flex: 1;
+            margin-left: 4%;
+        }
+        header .logo img {
+            height: 63px;
+        }
+        header .logo .logotext {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 3rem;
+            margin-left: 4%;
+        }
+        .mainMenu {
+            display: flex;
+            flex: 1;
+            align-items: center;
+            opacity: 1;
+            position: unset;
+            transform: none;
+            height: unset;
+            width: unset;
+        }
+        .mainMenu ul {
+            display: flex;
+            align-items: center;
+            list-style: none;
+            justify-content: flex-end;
+            flex: 1;
+            font-size: 1.5rem;
+        }
+        .mainMenu ul {
+            display: flex;
+            margin: 0;
+        }
+        .mainMenu li {
+            transition: none;
+            opacity: 1;
+            padding: 0;
+        }
+        .mainMenu li:nth-child(odd) {
+            transform: none;
+        }
+        .mainMenu li:nth-child(even) {
+            transform: none;
+        }
+        .mainMenu li:last-child {
+            transform: none;
+        }
+        .mainMenu ul li {
+            margin-right: 5%;
+            display: flex;
+            opacity: 1;
+            transform: none;
+        }
+        .mainMenu ul li button {
+            height: 56px;
+            width: 140px;
+            display: flex;
+            align-items: center;
+        }
+        .mainMenu ul li button a {
+            color: var(--gray-300);
+            text-decoration: none;
         }
         section.main {
             width: 144%;
@@ -855,7 +933,7 @@
             text-align: justify;
         }
         .quem-sou .darkbutton {
-            margin: -1rem 0 2rem 0;
+            margin: 2rem 0 2rem 0;
         }
         form .form-group {
             margin: 0.5%;
@@ -897,6 +975,9 @@
         .licence h2,
         .licence h3 {
             margin: 2% 0;
+        }
+        .totop {
+            padding: unset;
         }
         .aboutwrap .empresa,
         .aboutwrap .joao {

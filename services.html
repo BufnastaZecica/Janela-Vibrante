@@ -7,11 +7,12 @@
     <title>Janela Vibrante</title>
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/style.css" />
+    <script src="https://kit.fontawesome.com/27f499f5c8.js" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 
 <body>
-    <header>
+    <header id="top">
         <div class="logo ">
             <a href="index.html" class="logopic">
                 <img src="./imgs/logo.png" alt="Logo">
@@ -24,19 +25,19 @@
         <nav class="mainMenu">
             <ul>
                 <li>
-                    <a href="index.html">Home</a>
+                    <a href="index.html">Início</a>
                 </li>
                 <li>
-                    <a href="services.html">Services</a>
+                    <a href="services.html">Serviços</a>
                 </li>
                 <li>
-                    <a href="about.html">About</a>
+                    <a href="about.html">Quem somos</a>
                 </li>
                 <li>
-                    <a href="#licence" onclick='document.querySelector(".menuBtn").click()' ;>Licence</a>
+                    <a href="#licence" onclick='document.querySelector(".menuBtn").click()' ;>Licença</a>
                 </li>
                 <li>
-                    <button class="bluebutton"><a href="#contact">Contact</a></button>
+                    <a href="index.html#contact" onclick='document.querySelector(".menuBtn").click()' ; class='bluebutton'>Contactos</a>
                 </li>
             </ul>
         </nav>
@@ -46,23 +47,24 @@
 
     </main>
     <footer class="contact" id="contact">
-        <h1>Contact</h1>
+        <h1>CONTACTO</h1>
         <div class="contactwrap">
+
             <form id="contactForm">
                 <div class="form-group">
                     <!-- Name input-->
-                    <input class="form-control" id="name" type="text" placeholder="Your Name *" data-sb-validations="required" data-sb-can-submit="no" required>
+                    <input class="form-control" id="name" type="text" placeholder="Seu Nome *" data-sb-validations="required" data-sb-can-submit="no" required>
                     <div class="invalid-feedback" data-sb-feedback="name:required">A name is required.</div>
                 </div>
                 <div class="form-group">
                     <!-- Email address input-->
-                    <input class="form-control" id="email" type="email" placeholder="Your Email *" data-sb-validations="required,email" data-sb-can-submit="no" required>
+                    <input class="form-control" id="email" type="email" placeholder="Seu Email *" data-sb-validations="required,email" data-sb-can-submit="no" required>
                     <div class="invalid-feedback" data-sb-feedback="email:required">An email is required.</div>
                     <div class="invalid-feedback" data-sb-feedback="email:email">Email is not valid.</div>
                 </div>
                 <div class="form-group mb-md-0">
                     <!-- Phone number input-->
-                    <input class="form-control" id="phone" type="tel" placeholder="Your Phone *" data-sb-validations="required" data-sb-can-submit="no" required>
+                    <input class="form-control" id="phone" type="tel" placeholder="Seu Telefone *" data-sb-validations="required" data-sb-can-submit="no" required>
                     <div class="invalid-feedback" data-sb-feedback="phone:required">A phone number is required.
                     </div>
                 </div>
@@ -90,24 +92,36 @@
                     <div class="text-center text-danger mb-3">Error sending message!</div>
                 </div>
                 <div class="terms">
-                    <input type="checkbox" id="cond" name="terms-and-conditions" value="checked">
-                    <label for="terms-and-conditions">Declaro que aceito a <a href="politic.html" target="_blank">Política de proteção de dados</a> e os <a href="terms.html" target="_blank">Termos e Condições</a> e que os meus dados pessoais sejam processados para aconselhamento em formas de poupança, no âmbito da concessão de crédito.</label>
+                    <!-- id="licence" bilo u prethodnom divu? -->
+                    <input type="checkbox" id="terms-and-conditions" name="terms-and-conditions" value="checked">
+                    <label for="terms-and-conditions">Autorizo que os meus dados sejam recolhidos e objeto de tratamento
+                        para os efeitos indicados nos <a href="termsandpolitics.html" target="_blank">Termos e Condições
+                            e Politica de Privacidade</a></label>
+                    <br>
+                    <input type="checkbox" id="newsletter" name="newsletter" value="checked">
+                    <label for="newsletter">Gostaria de receber a newsletter da Janela Vibrante da AP Crédito no meu email.</label>
                 </div>
                 <!-- Submit Button-->
-                <button class="disabled" id="submitButton" type="submit">Send</button>
+                <button class="disabled" id="submitButton" type="submit">Enviar</button>
             </form>
+        </div>
+        <div class="contactinfowrap">
+            <div class="foto">
+                <img src="./imgs/image001.png" alt="Photo of João Paulo Ferreira">
+            </div>
             <div class="contactinfo">
                 <h1>João Paulo<br> Ferreira
                 </h1>
                 <address>
                     <a href="mailto:joao.ferreira@maxfinance.pt">joao.ferreira@maxfinance.pt</a>
-                    <a href="tel:+351938885048">(+351)938 885 048</a>
+                    <a href="tel:+351938885048">+351 93 888 50 48</a>
                 </address>
             </div>
         </div>
+        </div>
         <div class="licence" id="licence">
             <div>
-                <h1>Informação complementar á atividade de intermediação de crédito</h1>
+                <h1>Informação complementar à actividade de intermediação de crédito</h1>
                 <div class="generalinfo">
                     <ul>
                         <li>
@@ -123,12 +137,13 @@
                 </div>
             </div>
             <div class="personalinfo">
-                <p><b>Denominação:</b>Janela Vibrante Unipessoal Lda</p>
-                <p><b>Responsável:</b>João Paulo dos Santos Ferreira</p>
-                <p><b>Sede Social:</b>Rua 25 de Abril, Nr.º 38, 7580-621 Comporta - Setúbal</p>
-                <p><b>Nº de Registo como Intermediário de Crédito junto do Banco de Portugal::</b> 0006481</p>
-                <p><b>Categoria em que exerce atividade:</b>Vinculado</p>
-                <p><b>O registo pode ser consultado em:</b>https://www.bportugal.pt/intermediariocreditofar/janela-vibrante-unipessoal-lda</p>
+                <p><b>Denominação :</b> Janela Vibrante Unipessoal Lda</p>
+                <p><b>Responsável :</b> João Paulo dos Santos Ferreira</p>
+                <p><b>Sede Social :</b> Rua 25 de Abril, Nr.º 38, 7580-621 Comporta - Setúbal</p>
+                <p><b>Nº de Registo como Intermediário de Crédito junto do Banco de Portugal :</b> 0006481</p>
+                <p><b>Categoria em que exerce atividade :</b> Vinculado</p>
+                <p><b>O registo pode ser consultado
+                        em :</b> https://www.bportugal.pt/intermediariocreditofar/janela-vibrante-unipessoal-lda</p>
             </div>
             <div>
                 <h2 class="list-heading">Mutuantes com contrato de vinculação:</h2>
@@ -169,14 +184,20 @@
                 </ul>
                 <p>Em caso de processo de reclamação, a mesma deverá ser apresentada das seguintes formas:</p>
                 <ul>
-                    <li>Através do preenchimento do livro de reclamações, disponível em <a href="https://www.livroreclamacoes.pt/Inicio/" target="_blank">www.livroreclamacoes.pt</a></li>
+                    <li>Através do preenchimento do livro de reclamações, disponível em <a href="https://www.livroreclamacoes.pt/Inicio/" target="_blank">www.livroreclamacoes.pt</a>
+                    </li>
                     <li>Diretamente ao Banco de Portugal, através de carta ou do link
-                        <a href="https://www.livroreclamacoes.pt/Inicio/" target="_blank">www.livroreclamacoes.pt</a></li>
+                        <a href="https://www.livroreclamacoes.pt/Inicio/" target="_blank">www.livroreclamacoes.pt</a>
+                    </li>
                 </ul>
             </div>
         </div>
+        <div class="totop">
+            <a href="#top"><i class="fa-solid fa-chevron-up"></i></a>
+        </div>
         <div class="last">
-            <a href="https://www.fofinhos.pt/" target="_blank">Made with love by fofihnos.pt</a>
+            <a href="https://www.fofinhos.pt/" target="_blank">Made with <i class="fa-regular fa-heart fa-lg"></i> by
+                fofihnos.pt</a>
         </div>
     </footer>
     <script src="./js/main.js" type="text/javascript"></script>

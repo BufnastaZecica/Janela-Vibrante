@@ -301,6 +301,7 @@
     section.main h1 {
         font-size: 2rem;
         margin: 1rem;
+        line-height: 1.1;
     }
     
     section.main p {
@@ -309,6 +310,10 @@
         letter-spacing: 1;
         font-weight: 700;
         font-size: 1rem;
+    }
+    
+    section.main .bluebutton {
+        text-transform: uppercase;
     }
     
     section.services div {
@@ -386,7 +391,9 @@
     }
     
     section.free h1 {
-        font-size: 1.3rem;
+        font-size: 2rem;
+        font-weight: 900;
+        letter-spacing: 3px;
         border-top: 3px solid var(--secondary);
         border-bottom: 3px solid var(--secondary);
         padding: 0.8rem;
@@ -495,8 +502,7 @@
         letter-spacing: 0.8rem;
         text-transform: uppercase;
     }
-    
-    .quem-sou {
+    /* .quem-sou {
         padding: 0 2rem 1rem 2rem;
         color: var(--light);
     }
@@ -508,7 +514,7 @@
     
     .quem-sou button {
         margin-top: unset;
-    }
+    } */
     
     #contactForm {
         width: 100%;
@@ -914,7 +920,7 @@
             margin-bottom: unset;
         }
         footer.contact>h1 {
-            margin: 5% 0 1%;
+            margin: 5% 0;
         }
         .contact .contactinfowrap {
             display: flex;
@@ -926,14 +932,6 @@
         }
         #contactForm {
             width: 71%;
-        }
-        .quem-sou {
-            padding: 0 3rem 3rem 3rem;
-            width: 69%;
-            text-align: justify;
-        }
-        .quem-sou .darkbutton {
-            margin: 2rem 0 2rem 0;
         }
         form .form-group {
             margin: 0.5%;

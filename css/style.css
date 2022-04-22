@@ -244,6 +244,11 @@
         transform: translateX(0);
     }
     
+    .mainMenu .darkbutton,
+    .mainMenu .bluebutton {
+        margin: unset;
+    }
+    
     .mainMenu ul {
         display: table-cell;
         vertical-align: middle;
@@ -782,7 +787,7 @@
         }
         .mainMenu {
             display: flex;
-            flex: 1;
+            flex: 2;
             align-items: center;
             opacity: 1;
             position: unset;

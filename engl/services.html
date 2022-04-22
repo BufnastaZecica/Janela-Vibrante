@@ -1,0 +1,205 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Janela Vibrante</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/style.css" />
+    <script src="https://kit.fontawesome.com/27f499f5c8.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <header id="top">
+        <div class="logo ">
+            <a href="index.html" class="logopic">
+                <img src="../imgs/logo.png" alt="Logo">
+            </a>
+            <a href="index.html" class="logotext">Janela Vibrante</a>
+        </div>
+        <a href="#" class="menuBtn">
+            <span class="lines"></span>
+        </a>
+        <nav class="mainMenu">
+            <ul>
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+                <li>
+                    <a href="services.html">Services</a>
+                </li>
+                <li>
+                    <a href="about.html">About Us</a>
+                </li>
+                <li>
+                    <a href="#licence" onclick='document.querySelector(".menuBtn").click()' ;>Licence</a>
+                </li>
+                <li>
+                    <a href="../services.html" class="language"><img src="../imgs/pt.jpg" alt="Portuguese flag"></a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>UNDER CONSTRUCTION</h1>
+
+    </main>
+    <footer class="contact contabout" id="contact">
+        <h1>CONTACT</h1>
+        <div class="contactwrap">
+
+            <form id="contactForm">
+                <div class="form-group">
+                    <!-- Name input-->
+                    <input class="form-control" id="name" type="text" placeholder="Your Name *" data-sb-validations="required" data-sb-can-submit="no" required>
+                    <div class="invalid-feedback" data-sb-feedback="name:required">A name is required.</div>
+                </div>
+                <div class="form-group">
+                    <!-- Email address input-->
+                    <input class="form-control" id="email" type="email" placeholder="Your Email *" data-sb-validations="required,email" data-sb-can-submit="no" required>
+                    <div class="invalid-feedback" data-sb-feedback="email:required">An email is required.</div>
+                    <div class="invalid-feedback" data-sb-feedback="email:email">Email is not valid.</div>
+                </div>
+                <div class="form-group mb-md-0">
+                    <!-- Phone number input-->
+                    <input class="form-control" id="phone" type="tel" placeholder="Your Phone *" data-sb-validations="required" data-sb-can-submit="no" required>
+                    <div class="invalid-feedback" data-sb-feedback="phone:required">A phone number is required.
+                    </div>
+                </div>
+                <div class="form-group">
+                    <select name="operation" id="selest-service" required>
+                        <option value="1" selected="selected">Mortgage loans</option>
+                        <option value="2">Personal credit</option>
+                        <option value="3">Insurance</option>
+                    </select>
+                </div>
+                <!-- Submit success message-->
+                <!---->
+                <!-- This is what your users will see when the form-->
+                <!-- has successfully submitted-->
+                <div class="d-none" id="submitSuccessMessage">
+                    <div class="text-center text-white mb-3">
+                        <div class="fw-bolder">Form submission successful!</div>
+                    </div>
+                </div>
+                <!-- Submit error message-->
+                <!---->
+                <!-- This is what your users will see when there is-->
+                <!-- an error submitting the form-->
+                <div class="d-none" id="submitErrorMessage">
+                    <div class="text-center text-danger mb-3">Error sending message!</div>
+                </div>
+                <div class="terms">
+                    <!-- id="licence" bilo u prethodnom divu? -->
+                    <input type="checkbox" id="terms-and-conditions" name="terms-and-conditions" value="checked">
+                    <label for="terms-and-conditions">I authorize my data to be collected and processed
+                        for the purposes indicated in the <a href="termsandpolitics.html" target="_blank">Terms and Conditions
+                            and Privacy Policy</a></label>
+                    <br>
+                    <input type="checkbox" id="newsletter" name="newsletter" value="checked">
+                    <label for="newsletter">I would like to receive the newsletter from Janela Vibrante from AP Credit in my email.</label>
+                </div>
+                <!-- Submit Button-->
+                <button class="disabled" id="submitButton" type="submit">Send</button>
+            </form>
+        </div>
+        <div class="contactinfowrap">
+            <div class="foto">
+                <img src="../imgs/image001.png" alt="Photo of João Paulo Ferreira">
+            </div>
+            <div class="contactinfo">
+                <h1>João Paulo<br> Ferreira
+                </h1>
+                <address>
+                    <a href="mailto:joao.ferreira@maxfinance.pt">joao.ferreira@maxfinance.pt</a>
+                    <a href="tel:+351938885048">+351 93 888 50 48</a>
+                </address>
+            </div>
+        </div>
+        </div>
+        <div class="licence" id="licence">
+            <div>
+                <h1>Complementary information for credit intermediation activity</h1>
+                <div class="generalinfo">
+                    <ul>
+                        <li>
+                            <p>The Franchisee is part of the MAXFINANCE network, being a separate legal entity from Max Finance – Intermediarios de Crédito, Lda.;</p>
+                        </li>
+                        <li>
+                            <p>The Franchisee is obliged to act in accordance with the MAXFINANCE code of conduct, which imposes transparency and probity in the provision of the intermediation service, as well as protecting the interests of customers/consumers;</p>
+                        </li>
+                        <li>
+                            <p>The Franchisee is not allowed to carry out banking or financial operations.</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="personalinfo">
+                <p><b>Name :</b> Janela Vibrante Unipessoal Lda</p>
+                <p><b>Responsible :</b> João Paulo dos Santos Ferreira</p>
+                <p><b>Corporate Headquarters :</b> Rua 25 de Abril, Nr.º 38, 7580-621 Comporta - Setúbal</p>
+                <p><b>Registration No. of Credit Intermediary at the Bank of Portugal :</b> 0006481</p>
+                <p><b>Category of work :</b> Intermediator????? Binder?</p>
+                <p><b>The register can be consulted at :</b> https://www.bportugal.pt/intermediariocreditofar/janela-vibrante-unipessoal-lda</p>
+            </div>
+            <div>
+                <h2 class="list-heading">Lenders with a binding agreement:</h2>
+                <ul>
+                    <li>CAIXA GERAL DE DEPÓSITOS, SA</li>
+                    <li>BANCO SANTANDER TOTTA, SA</li>
+                    <li>NOVO BANCO, SA</li>
+                    <li>BANCO BPI, SA</li>
+                    <li>BANCO BIC PORTUGUÊS, SA</li>
+                    <li>ABANCA CORPORACIÓN BANCARIA, SA, SUCURSAL EM PORTUGAL</li>
+                    <li>UNION DE CRÉDITOS INMOBILIÁRIOS, S.A., ESTABLECIMIENTO FINANCIERO DE CRÉDITO (SOCIEDAD UNIPERSONAL) - SUCURSAL EM PORTUGAL</li>
+                    <li>BANKINTER, SA - SUCURSAL EM PORTUGAL</li>
+                    <li>BANCO CTT, SA</li>
+                </ul>
+            </div>
+            <div class="rc">
+                <h2>Civil responsability:</h2>
+                <p><b>Mortgage Credit - </b>2525206</p>
+                <p>Insurer name - Hiscox S.A. Branch in Portugal</p>
+                <p>Valid from: 30-08-2021 to 29-08-2022</p>
+                <p><b>Crédito ao Consumo -</b>2525207</p>
+                <p>Insurer name - Hiscox S.A. Branch in Portugal</p>
+                <p>Valid from: 30-08-2021 to 29-08-2022</p>
+            </div>
+            <div>
+                <h2>Conflict Resolution Centers:</h2>
+                <p>CNIACC - National Center for Information and Arbitration of Consumer Disputes | CACCL - LISBON CONSUMER CONFLICT ARBITRATION CENTER</p>
+                <h3>Credit intermediation services:</h3>
+                <p>The Credit Intermediary is prohibited from receiving or delivering any amounts related to the formation, execution and early fulfillment of credit agreements, pursuant to article 46 of Decree-Law No. 81-C/2017 of 7th of July concerning
+                    the Legal Regime for Credit Intermediaries.</p>
+                <p>The Credit Intermediation activity is subject to the supervision of Banco de Portugal (site: <a href="https://www.bportugal.pt/" target="_blank">www.bportugal.pt</a> )</p>
+                <h3>Services related to Mortgage Credit and Consumer Credit:</h3>
+                <ul>
+                    <li>Submission or proposal of consumer credit agreements</li>
+                    <li>Assistance to consumers, by carrying out preparatory acts or other pre-contractual management work in relation to credit agreements that have not been presented or proposed by them</li>
+                    <li>Conclusion of credit agreements with consumers on behalf of lenders</li>
+                    <li>Consulting services</li>
+                </ul>
+                <p>In the event of a complaint process, it must be presented in the following ways:</p>
+                <ul>
+                    <li>By filling in the complaints book, available at <a href="https://www.livroreclamacoes.pt/Inicio/" target="_blank">www.livroreclamacoes.pt</a>
+                    </li>
+                    <li>Directly to Banco de Portugal, by letter or via the link
+                        <a href="https://www.livroreclamacoes.pt/Inicio/" target="_blank">www.livroreclamacoes.pt</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="totop">
+            <a href="#top"><i class="fa-solid fa-chevron-up"></i></a>
+        </div>
+        <div class="last">
+            <a href="https://www.fofinhos.pt/" target="_blank">Made with <i class="fa-regular fa-heart fa-lg"></i> by
+                fofihnos.pt</a>
+        </div>
+    </footer>
+    <script src="../js/main.js" type="text/javascript"></script>
+</body>
+
+</html>
